@@ -1,0 +1,471 @@
+/* FORSIDE - GØR SÅLEDES AT DIVERSE ELEMENTER IKKE VISES PÅ FORSIDEN*/
+
+.forside #top-bar-wrap {
+    display: none;
+}
+
+.forside #site-header {
+    display: none;
+}
+
+.forside .menusvommehal {
+    display: none;
+}
+
+.forside #footer {
+    display: none;
+}
+
+/*FORSIDE HALLERNE - GØR SÅLEDES AT SVØMMEHALLENS MENUBAR IKKE VISES PÅ HALLERNE/PAKRENS SIDE*/
+.forsidehal .menusvommehal {
+    display: none;
+    overflow: hidden;
+}
+
+
+/*FORSIDE SVOMMEHAL - GØR SÅLEDES AT HALLERNE/PARKENS MENUBAR IKKE VISES PÅ SVØMMEHALLENS SIDE */
+
+
+.forsidesvommehal #menu-hallerne {
+    display: none;
+}
+
+.forsidesvommehal #site-navigation-wrap {
+    display: none;
+}
+
+.forsidesvommehal .bottom-header-wrap,
+.top-header-wrap {
+    display: none;
+}
+
+/*TABS MODUL - PÅ SVØMMEHALLENS SIDE_____________________________________________________*/
+/* DETTE ER OVERSKRIFTEN TIL SEKTIONEN BASSINER */
+.bassinh1 {
+    font-size: 25px;
+    text-align: center;
+    color: #1a4583;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* DETTE ER BRØDTEKSTEN SEKTIONEN OM BASSINER*/
+.bassinp {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TOP MENU - DENNE MENU ER DEN HVIDE MENU MED TO PUNKTER, DER HENVISER TIL HALLERNE/PARKEN OG SVØMMEHALLEN */
+
+.topmenu {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+
+/* MOBIL MEDIAQUERY________________________________________________________________________ */
+@media (max-width: 767px) {
+
+    /*TOPMENU*/
+    .topmenu {
+        display: none;
+    }
+
+    /* GØR AT BURGERMENU IKKE VISES PÅ FORSIDEN OG HALLERNE/PARKENS SIDE */
+    .forside .toggle-nav {
+        display: none !important;
+    }
+
+    .forsidehal .toggle-nav {
+        display: none !important;
+    }
+
+    /* BURGERMENU TIL SVØMMEHALLEN_____________________________________________________ */
+    /* SELVE BURGERMENU */
+    .toggle-nav {
+        font-size: 28px;
+        text-align: center;
+        z-index: 1;
+        display: inline-block !important;
+        color: #1d1d1b;
+        transition: color linear 0.15s;
+        background-color: #d5edfa;
+        width: 100%;
+        margin-top: -10%;
+    }
+
+    /*DESIGNET TIL BURGERMENU, HVORDAN DEN ER PLACERET, SKRIFT, FARVE M.M.*/
+
+    .menusvommehal {
+        display: inline-block;
+        background: #fff;
+        position: relative;
+        z-index: 2;
+        top: 30px;
+    }
+
+    .menusvommehal ul {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        left: 0px;
+        padding-left: 25px;
+        padding-right: 55px;
+        padding-top: 10px;
+        background: #d5edfa;
+
+    }
+
+    .menusvommehal li {
+        display: block;
+        float: none;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        text-align: center;
+
+    }
+
+    /* PLACERING, STØRRELSE, SKRIFT PÅ DROPDOWN */
+    .menusvommehal li a,
+    .menusvommehal li a:link {
+        color: black;
+        margin-left: 40px;
+        font-size: 12px;
+        font-family: 'Poppins', sans-serif;
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .menusvommehal li li a,
+    .menusvommehal li li a:link,
+    .menusvommehal li li a:visited {
+        font-size: 12px;
+        background: #d5edfa;
+        color: black;
+        width: 140px;
+        margin: 8px 0px -10px 24px;
+        line-height: 20px;
+        position: relative;
+
+    }
+
+    .menusvommehal li ul {
+        z-index: 2;
+        position: relative;
+        height: auto;
+        width: 170px;
+        padding: 0px;
+    }
+
+
+}
+
+/* TABLET MEDIAQUERY */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* MEDVIRKER TIL AT BURGERMENU IKKE VISES PÅ TABLET */
+    .toggle-nav {
+        display: none !important;
+    }
+
+    /*MENUBAR SVOMMEHAL - PLACERING/STYLING AF SVØMMEHALLENS MENUBAR*/
+    .menusvommehal {
+        width: 100%;
+        display: block;
+        z-index: 9999;
+        top: 40px;
+        position: fixed;
+        background: #d5edfa;
+        text-align: center;
+    }
+
+    .menu-svoemmehallen {
+        float: none;
+        display: block;
+        margin-left: 5px;
+    }
+
+    .menusvommehal ul {
+        float: none;
+        margin: 12px 0 0 0;
+        padding: 0;
+        height: 50px;
+        display: inline-block;
+    }
+
+    .menusvommehal li {
+        display: inline-block;
+        list-style: none;
+        line-height: 30px;
+    }
+
+    /* PLACERING, STØRRELSE, SKRIFT PÅ DROPDOWN */
+    .menusvommehal li a,
+    .menusvommehal li a:link {
+        color: black;
+        margin-left: 40px;
+        font-size: 12px;
+        font-weight: 300;
+        font-family: 'Poppins', sans-serif;
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .menusvommehal li li a,
+    .menusvommehal li li a:link,
+    .menusvommehal li li a:visited {
+        font-size: 10px;
+        background: #d5edfa;
+        color: black;
+        width: 140px;
+        margin: 0 0 0 1px;
+        line-height: 25px;
+        position: relative;
+
+    }
+
+    .menusvommehal li li a:hover,
+    .menusvommehal li li a:active {
+        background-color: white;
+    }
+
+
+    .menusvommehal li:hover ul,
+    .menusvommehal li li:hover ul,
+    .menusvommehal li li li:hover ul,
+    .menusvommehal li.sfhover ul,
+    #topwctopdropnav li li.sfhover ul,
+    #topwctopdropnav li li li.sfhover ul {
+        left: auto;
+    }
+
+    .menusvommehal li:hover,
+    .menusvommehal li.sfhover {
+        position: static;
+        border-bottom: 1px solid #C8C8C8;
+    }
+
+    /* STYLING AF DROPDOWN PIL */
+    .down {
+        border: solid black;
+        border-width: 0 0.1px 0.1px 0;
+        display: inline-block;
+        padding: 2.7px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin: 0 0 3px 6px;
+    }
+
+    /* STYLING AF UNDERLINE ANIMTAION */
+    li .menusvommehal {
+        vertical-align: middle;
+    }
+
+    .menusvommehal a:hover,
+    .menusvommehal a:focus,
+    .menusvommehal a:active {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .menusvommehal a {
+        text-decoration: none;
+        transition: color 0.1s, background-color 0.1s;
+    }
+
+    /* HER ER DER TILFØJET TRANSITION SÅ STREGEN GLIDER IND */
+    .menusvommehal a {
+        position: relative;
+        display: block;
+        letter-spacing: 1px;
+        transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+        color: rgba(0, 0, 0, 0.1);
+    }
+
+   /* HER ER DER TILFØJET TRANSITION SÅ STREGEN GLIDER UD I HØJRE SIDE AF TOPPEN */
+    .menusvommehal a::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        transform-origin: right top;
+        transform: scale(0, 1);
+        transition: color 0.1s, transform 0.2s ease-out;
+    }
+
+    /* FORTÆLLER AT LINJEN KOMMER FRA VENSTRE SIDE I TOPPEN, SAMT AT STØRRELSEN(SCALE) ER 1/1 */
+    .menusvommehal a:hover::before,
+    .menusvommehal a:hover::before,
+    .menusvommehal a:focus::before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+    }
+
+
+    /*MENUBAR SLUT*/
+
+}
+
+
+/* DESKTOP MEDIAQUERY */
+@media (min-width: 1024px) {
+    .toggle-nav {
+        display: none !important;
+    }
+
+    /*MENUBAR SVOMMEHAL - PLACERING/STYLING AF SVØMMEHALLENS MENUBAR*/
+    .menusvommehal {
+        width: 100%;
+        display: block;
+        z-index: 9999;
+        top: 40px;
+        position: fixed;
+        background: #d5edfa;
+        text-align: center;
+    }
+
+    .menu-svoemmehallen {
+        float: none;
+        display: block;
+        margin-left: 5px;
+    }
+
+    .menusvommehal ul {
+        float: none;
+        margin: 12px 0 0 0;
+        padding: 0;
+        height: 50px;
+        display: inline-block;
+    }
+
+    .menusvommehal li {
+        display: inline-block;
+        list-style: none;
+        line-height: 30px;
+    }
+
+    /* PLACERING, STØRRELSE, SKRIFT PÅ DROPDOWN */
+    .menusvommehal li a,
+    .menusvommehal li a:link {
+        color: black;
+        margin-left: 40px;
+        font-size: 12px;
+        font-weight: 300;
+        font-family: 'Poppins', sans-serif;
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .menusvommehal li li a,
+    .menusvommehal li li a:link,
+    .menusvommehal li li a:visited {
+        font-size: 12px;
+        background: #d5edfa;
+        color: black;
+        width: 140px;
+        margin: 0 0 0 1px;
+        line-height: 25px;
+        position: relative;
+
+    }
+
+    .menusvommehal li li a:hover,
+    .menusvommehal li li a:active {
+        background-color: white;
+    }
+
+    .menusvommehal li ul {
+        z-index: 9999;
+        position: fixed;
+        left: -999em;
+        height: auto;
+        width: 170px;
+        margin: 0 0 0 -60px;
+        padding: 0px;
+    }
+
+    .menusvommehal li:hover ul,
+    .menusvommehal li li:hover ul,
+    .menusvommehal li li li:hover ul,
+    .menusvommehal li.sfhover ul,
+    #topwctopdropnav li li.sfhover ul,
+    #topwctopdropnav li li li.sfhover ul {
+        left: auto;
+    }
+
+    .menusvommehal li:hover,
+    .menusvommehal li.sfhover {
+        position: static;
+
+    }
+
+    /* STYLING AF DROPDOWN PIL */
+    .down {
+        border: solid black;
+        border-width: 0 0.1px 0.1px 0;
+        display: inline-block;
+        padding: 2.7px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin: 0 0 3px 6px;
+    }
+
+    /* STYLING AF UNDERLINE ANIMTAION */
+    li .menusvommehal {
+        vertical-align: middle;
+    }
+
+    .menusvommehal a:hover,
+    .menusvommehal a:focus,
+    .menusvommehal a:active {
+        color: rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+    }
+
+    .menusvommehal a {
+        text-decoration: none;
+        transition: color 0.1s, background-color 0.1s;
+    }
+
+    /* HER ER DER TILFØJET TRANSITION SÅ STREGEN GLIDER IND */
+    .menusvommehal a {
+        position: relative;
+        display: block;
+        letter-spacing: 1px;
+        transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+        color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* HER ER DER TILFØJET TRANSITION SÅ STREGEN GLIDER UD I HØJRE SIDE AF TOPPEN */
+    .menusvommehal a::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        transform-origin: right top;
+        transform: scale(0, 1);
+        transition: color 0.1s, transform 0.2s ease-out;
+    }
+
+    /* FORTÆLLER AT LINJEN KOMMER FRA VENSTRE SIDE I TOPPEN, SAMT AT STØRRELSEN(SCALE) ER 1/1 */
+    .menusvommehal a:hover::before,
+    .menusvommehal a:focus::before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+    }
